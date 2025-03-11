@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
 import Button from '@mui/material/Button';
-import NoDataStroeIcon from '../../assets/images/noDataStroeIcon.svg'
-import PageTitle from './pageTitle';
+import PageTitle from '../common/pageTitle';
+import NoDataStroeIcon from '../../../assets/images/noDataStroeIcon.svg';
+
 const NoDataStoresFound = () => {
   return (
     <Box>
