@@ -11,9 +11,9 @@ html,
 body {
     font-family: 'inter', sans-serif;
     color: #1B242C;
-    line-height: 28px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1rem;
+    line-height: normal;
 }
 
 h1,
@@ -39,13 +39,24 @@ h6 {
     align-items: center;
 }
 
+.default-color {
+    color: #1B242C !important;
+}
+
 .sidebar {
-    background-color: #C3B2F688;
+    background-image: linear-gradient(to right, #eeeafc, #f4f2fb);
     backdrop-filter: blur(.5rem);
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     .logo-toggle-wrapper {
         position: relative;
+
+        .q3-logo {
+            display: flex;
+        }
 
         .collapsed-toggle-icon {
             background-color: #fff;
@@ -59,16 +70,66 @@ h6 {
     &.sidebar-expanded {
         padding: 1rem;
         width: 16.875rem;
+
     }
 
     &.sidebar-collapsed {
         padding: 1rem .75rem;
         width: 4.5rem;
+
+        .links-wrapper {
+
+            .MuiSvgIcon-root {
+                display: none;
+            }
+
+            .MuiListItemText-root {
+                display: none;
+
+
+            }
+        }
+
+        .user-theme-wrapper {
+            .user-name {
+                display: none;
+            }
+
+            .user-btn {
+                display: none;
+            }
+
+            .theme-wrappper {
+                width: 2.5rem;
+                height: 2.5rem;
+                align-items: center;
+                justify-content: center;
+
+                .MuiButtonBase-root {
+                    width: 1.85rem;
+                    height: 1.85rem;
+
+                    .default-text {
+                        display: none;
+                    }
+
+                    &:not(.Mui-selected) {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+
     }
 
     .links-wrapper {
         margin-top: 40px;
         padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
         .MuiButtonBase-root {
             gap: .75rem;
@@ -77,10 +138,83 @@ h6 {
             font-weight: 500;
             font-size: 1rem;
             line-height: 1.25;
-            letter-spacing: 0%;
+            letter-spacing: 0;
+            background-color: transparent;
+            height: 2.5rem;
+
+            &:hover {
+                box-shadow: 0px 4px 10px 0px #0000000F;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 95%);
+                color: #1B242C;
+            }
 
             .MuiListItemIcon-root {
                 min-width: auto;
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+    }
+
+    .user-theme-wrapper {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: #1B242C;
+
+        .user-image {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+        }
+
+        .user-name {
+            color: #1B242C;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+
+        .user-btn {
+            margin-left: auto;
+        }
+
+        .theme-wrappper {
+            display: flex;
+            padding: 0.25rem;
+            background-color: #fff;
+            width: 100%;
+            height: 40px;
+            border-radius: 50px;
+
+            .MuiButtonBase-root {
+                flex: 1 1 auto;
+                border: 0;
+                padding: 0.5rem;
+                border-radius: 50px;
+                font-weight: 500;
+                font-size: .875rem;
+                line-height: 1.5;
+                letter-spacing: 0;
+                background-color: #fff;
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                justify-content: center;
+
+                &.Mui-selected {
+                    background-color: #F5F7F9;
+                }
+
+                .MuiSvgIcon-root {
+                    width: 1.125rem;
+                    height: 1.125rem;
+                }
+
+                .default-text {
+                    text-transform: capitalize;
+                }
             }
         }
     }
@@ -220,4 +354,3 @@ h6 {
     }
 
 }
-
