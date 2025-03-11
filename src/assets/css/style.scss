@@ -1,0 +1,76 @@
+@use "../css/variables" as *;
+@import "../fonts/Inter/stylesheet.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Inter', sans-serif;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.sidebar {
+    background-color: #C3B2F688;
+    backdrop-filter: blur(.5rem);
+    height: 100vh;
+
+    .logo-toggle-wrapper {
+        position: relative;
+
+        .collapsed-toggle-icon {
+            background-color: #fff;
+            opacity: 0.8;
+            position: absolute;
+            bottom: -2.5rem;
+            right: -2rem;
+        }
+    }
+
+    &.sidebar-expanded {
+        padding: 1rem;
+        width: 16.875rem;
+    }
+
+    &.sidebar-collapsed {
+        padding: 1rem .75rem;
+        width: 4.5rem;
+    }
+
+    .links-wrapper {
+        margin-top: 40px;
+        padding: 0;
+
+        .MuiButtonBase-root {
+            gap: .75rem;
+            border-radius: .375rem;
+            padding: 0 .875rem;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.25;
+            letter-spacing: 0%;
+
+            .MuiListItemIcon-root {
+                min-width: auto;
+            }
+        }
+    }
+
+}
+
+.main-wrapper {
+    padding: 1.5rem 2rem;
+}
