@@ -1,3 +1,28 @@
+$font-family-inter:"inter", sans-serif;
+// FontSize
+$f-16: 1rem;
+$f-14:0.875rem;
+$f-12: 0.75rem;
+$f-20:1.25rem;
+$f-24:1.5rem;
+$f-18: 1.125rem;
+// Font-weight
+$f-w-400:400;
+$f-w-600:600;
+$f-w-500:500;
+$f-w-700:700;
+$f-w-300:300;
+// lineheight
+$lineheight-16:1rem;
+$lineheight-18:1.125rem;
+$lineheight-19:1.188rem;
+$lineheight-20:1.25rem;
+$lineheight-21:1.313rem;
+$lineheight-22:1.375rem;
+$lineheight-24:1.5rem;
+$lineheight-28:1.75rem;
+$lineheight-30:1.875rem;
+
 :root {
     --white-color: #fff;
     --table-header-bg: #F1F3F5;
