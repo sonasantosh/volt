@@ -1,8 +1,9 @@
 import { Box, TextField } from '@mui/material';
 import Stack from '@mui/material/Stack';
-import TitleArrow from '../../assets/images/back-arrow.svg'
+import TitleArrow from '../../../assets/images/back-arrow.svg'
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid2';
+
 const CreateDataStores = () => {
   return (
     <Box>
@@ -45,4 +46,4 @@ const CreateDataStores = () => {
   )
 }
 
-export default CreateDataStores
+export default CreateDataStores 

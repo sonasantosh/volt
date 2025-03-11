@@ -1,10 +1,12 @@
 import { Box } from '@mui/material';
 import Button from '@mui/material/Button';
-import NoDataStroeIcon from '../../assets/images/noDataStroeIcon.svg'
+import PageTitle from '../common/pageTitle';
+import NoDataStroeIcon from '../../../assets/images/noDataStroeIcon.svg';
+
 const NoDataStoresFound = () => {
   return (
     <Box>
-        <Box className="page-title" component={'h1'}>Datastores</Box>
+       <PageTitle />
         <Box className="nodatestoresfound">
             <Box className="nodatestoresfound-inner">
                 <Box className="nodatastore-icon-wrap"><Box component={'img'} src={NoDataStroeIcon} alt="NoDataStore"/></Box>
