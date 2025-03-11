@@ -17,7 +17,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-
+import NoDataStoresFound from './frontend/components/noDataStoresFound';
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState<Boolean>(true);
   const [openSubMenu, setOpenSubMenu] = useState(true);
@@ -99,13 +99,11 @@ function App() {
 
           </Box>
         </Box >
-        <Box className="main-wrapper">
-          <Box component={"header"}>
-            header
-          </Box>
+        <Box className="main-wrapper" >
           <Box component={"main"}>
-            main
+            <NoDataStoresFound />
           </Box>
+
         </Box>
       </Stack >
     </>
