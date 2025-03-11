@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, IconButton, Stack, Avatar, ToggleButtonGroup, ToggleButton } from '@mui/material';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Logo from "../../../assets/images/Logo.svg";
 import SmallLogo from "../../../assets/images/logo-icon.svg"
 import ToggleIcon from "../../../assets/images/humbergur.svg";
@@ -25,6 +25,8 @@ const Sidebar = () => {
     const [sidebarOpen, setSidebarOpen] = useState<Boolean>(true);
     const [openSubMenu, setOpenSubMenu] = useState(false);
     const [themeSelector, setThemeSelector] = useState('light');
+
+    const navigate = useNavigate();
 
     const handleMenuClick = () => {
         setOpenSubMenu(!openSubMenu);
@@ -55,25 +57,25 @@ const Sidebar = () => {
                 component="nav"
                 aria-labelledby="nested-list-subheader"
             >
-                <ListItemButton>
+                <ListItemButton onClick={() => navigate("/agent")}>
                     <ListItemIcon>
                         <img src={AgentIcon} alt='Agent' />
                     </ListItemIcon>
                     <ListItemText primary="Agents" />
                 </ListItemButton>
-                <ListItemButton>
+                <ListItemButton onClick={() => navigate("/connectors")}>
                     <ListItemIcon>
                         <img src={ConnectorIcon} alt='Connectors' />
                     </ListItemIcon>
                     <ListItemText primary="Connectors" />
                 </ListItemButton>
-                <ListItemButton>
+                <ListItemButton onClick={() => navigate("/datastores")}>
                     <ListItemIcon>
                         <img src={DataStoreIcon} alt='Datastores' />
                     </ListItemIcon>
                     <ListItemText primary="Datastores" />
                 </ListItemButton>
-                <ListItemButton>
+                <ListItemButton onClick={() => navigate("/api-reference")}>
                     <ListItemIcon>
                         <img src={ApiReferenceIcon} alt='Api Reference' />
                     </ListItemIcon>
