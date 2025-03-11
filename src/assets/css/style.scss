@@ -7,9 +7,25 @@
     box-sizing: border-box;
 }
 
-html, body{
-    font-family: 'Inter', sans-serif;
+html,
+body {
+    font-family: 'inter', sans-serif;
+    color: #1B242C;
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 14px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+}
+
 
 .p-0 {
     padding: 0 !important;
@@ -74,3 +90,133 @@ html, body{
 .main-wrapper {
     padding: 1.5rem 2rem;
 }
+
+
+// No Datastore Found.
+.common-button {
+    background: linear-gradient(180deg, #2E4ACD 0%, #4364FF 100%) !important;
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #5876FF 0%, #2641BE 100%);
+    border-radius: 8px !important;
+    color: #fff;
+    font-size: 18px !important;
+    line-height: 30px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    font-family: 'Inter', sans-serif !important;
+    box-shadow: none !important;
+    letter-spacing: 0 !important;
+    padding: 10px 20px !important;
+}
+
+.page-title {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.title-with-arrow {
+    margin-bottom: 1.5rem;
+
+    .icon-button-arrow {
+        border: 1px solid #9EA8B3;
+        padding: 12px !important;
+        border-radius: 6px;
+    }
+}
+
+.nodatestoresfound {
+    border: 1px solid #DEE3E7;
+    padding: 80px;
+    border-radius: 16px;
+
+    .nodatestoresfound-inner {
+        max-width: 579px;
+        margin: 0 auto;
+        text-align: center;
+
+        .nodatastore-icon-wrap {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            border: 1px solid #DEE3E7;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 24px;
+            line-height: 28px;
+            color: #1B242C;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #555F6D;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+// Create Datastore
+.inputwrap {
+    .MuiInputBase-formControl {
+        border-radius: 8px;
+
+        .MuiInputBase-root {
+            background-color: rgba(0, 0, 0, 0.12);
+
+            &::before {
+                border-bottom: none !important;
+            }
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        font-family: 'inter', sans-serif;
+        color: #1B242C;
+        margin: 0 0 0.5rem;
+
+        .required-sign {
+            color: #ff0000;
+        }
+    }
+
+    input {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        font-family: 'inter', sans-serif;
+        color: #555F6D;
+        padding: 0.875rem 0.75rem;
+        height: auto;
+        letter-spacing: 0;
+
+        &:focus {
+            outline: none !important;
+        }
+
+        &::placeholder {
+            color: #444;
+            opacity: 1;
+            font-weight: 400;
+            font-size: 0.875rem;
+        }
+
+    }
+
+    .MuiSelect-select {
+        padding: 12.5px 12px;
+    }
+
+}
+
