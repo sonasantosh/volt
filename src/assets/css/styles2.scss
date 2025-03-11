@@ -1,0 +1,111 @@
+@use "../css/variables" as *;
+// Create Datastore
+.inputwrap {
+    .MuiInputBase-formControl {
+        padding:0 !important;
+        &:before,&:after{
+            border:0 !important;
+        }
+        border-radius: 8px;
+
+        .MuiInputBase-root {
+            background-color: rgba(0, 0, 0, 0.12);
+
+            &::before {
+                border-bottom: none !important;
+            }
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        font-family:$font-family-inter;
+        color: #1B242C;
+        margin: 0 0 0.5rem;
+
+        .required-sign {
+            color: #ff0000;
+        }
+    }
+
+    input {
+        font-size: $f-16;
+        line-height: $lineheight-28;
+        font-weight: 500;
+        font-family: $font-family-inter;
+        color: #1B242C;
+        padding: 0.875rem 0.75rem !important;
+        height: auto;
+        letter-spacing: 0;
+        &:focus {
+            outline: none !important;
+        }
+        &::placeholder {
+            color: #444;
+            opacity: 1;
+            font-weight: 400;
+            font-size: $f-16;
+        }
+
+    }
+
+    .MuiSelect-select {
+        padding: 12.5px 12px;
+    }
+
+}
+.MuiAutocomplete-tag {
+    background: #fff !important;
+    border-radius: 4px !important;
+    color: #1B242C !important;
+    font-weight: 500 !important;
+    font-family: 'Inter', sans-serif !important;
+    margin:3px !important;
+}
+// FileUpload Input
+.uploadfile-wrap{
+    label{
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        border: 2px dotted #9EA8B3;
+        min-height: 90px;
+        border-radius: 8px;
+        letter-spacing: 0;
+       &:hover{
+          background-color: transparent;
+          box-shadow: none;
+       }
+       .MuiButton-icon{
+          margin-right:1rem;
+       }
+       .filetext-wrap{
+          color: #333;
+          font-size: 1rem;
+          line-height:$lineheight-28;
+          font-family: $font-family-inter;
+          font-weight: $f-w-400;
+          text-transform: none;
+          a{
+             color: #333;
+             text-decoration: underline;
+          }
+          .filesub-text{
+             font-size: $f-14;
+             line-height: 1rem;
+             color: #555F6D;
+          }
+          .file-browse{
+            color:#2E4ACD;
+            text-decoration: underline;
+          }
+
+       }
+    }
+ }
+ .create-data-store-wrap {
+    border: 1px solid #DEE3E7;
+    padding: 1rem;
+    border-radius: 16px;
+}

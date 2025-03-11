@@ -3,7 +3,9 @@ import Stack from '@mui/material/Stack';
 import TitleArrow from '../../../assets/images/back-arrow.svg'
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid2';
-
+import SelectDropdownWithSearchBox from '../../components/selectDropdownWithCheckbox'
+import Upload from '../../components/common/uploadFile' 
+import TextInput from '../../../frontend/components/common/textField'
 const CreateDataStores = () => {
   return (
     <Box>
@@ -19,23 +21,11 @@ const CreateDataStores = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
                     <Grid size={6}>
-                        <Box className="inputwrap">
-                            <Box component="p">Datastore Name <Box component="span" className='required-sign'>*</Box></Box>
-                            <TextField
-                              fullWidth
-                              id="outlined-error"
-                              placeholder="Enter ADID"
-                              className="input-text"
-                            //   disabled
-                                variant="filled"
-                            />
-                          </Box>
-
-
+                        <TextInput />
                     </Grid>
-                    <Grid size={6}>1</Grid>
-                    <Grid size={6}>1</Grid>
-                    <Grid size={6}>1</Grid>
+                    <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
+                    <Grid size={12}><Upload /></Grid>
+                   
                 </Grid>
             </Box>
 
