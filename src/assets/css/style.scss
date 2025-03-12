@@ -433,13 +433,47 @@ h6 {
         }
     }
 
-    .btn-wrapper{
-        .common-button{
+    .btn-wrapper {
+        .common-button {
             font-size: 1rem !important;
             line-height: 1.25 !important;
         }
-            
+
     }
 }
 
 // Datastore Item End
+
+// Default Toast
+.default-toast {
+    .MuiPaper-root {
+        border-radius: 3rem;
+        padding: .5rem 1rem .5rem .5rem;
+        box-shadow: 0px 4px 4px 0px #0000001A;
+        background: linear-gradient(103.71deg, #3181E7 -40.46%, #0D13B2 101.12%);
+        color: #fff;
+
+        .MuiSnackbarContent-message {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.25;
+        }
+    }
+
+    &.success {
+        .MuiPaper-root {
+            background: #0DA051;
+        }
+    }
+
+    &.danger {
+        .MuiPaper-root {
+            background: #f00;
+        }
+    }
+}
