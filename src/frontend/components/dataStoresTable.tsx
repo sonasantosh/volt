@@ -22,6 +22,7 @@ import { visuallyHidden } from '@mui/utils';
 import "../../assets/css/style.scss";
 import sortIcon from '../../assets/images/sorting-icon.svg';
 import { Pagination } from '@mui/material';
+import TableHeadingWithFilters from './datastores/tableHeadingWithFilters';
 
 function createData(id, name, calories, fat, carbs, protein) {
   return {
@@ -107,6 +108,7 @@ function EnhancedTableHead(props) {
   };
 
   return (
+    <>
     <TableHead>
       <TableRow>
         <TableCell padding="checkbox">
@@ -141,6 +143,7 @@ function EnhancedTableHead(props) {
         ))}
       </TableRow>
     </TableHead>
+    </>
   );
 }
 
@@ -277,8 +280,9 @@ export default function EnhancedTable() {
 
   return (
     <Box sx={{ width: '100%' }} className="data-stores-table">
+      <TableHeadingWithFilters />
       <Paper sx={{ width: '100%', mb: 2, overflow: 'hidden' }}>
-       
+        
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table
             sx={{ minWidth: 750 }}

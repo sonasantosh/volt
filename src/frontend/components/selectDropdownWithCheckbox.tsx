@@ -4,7 +4,6 @@ import Autocomplete from '@mui/material/Autocomplete';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import { Box } from '@mui/material';
-
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
@@ -22,14 +21,18 @@ export default function CheckboxesTags() {
         renderOption={(props, option, { selected }) => {
             const { key, ...optionProps } = props;
             return (
-            <li key={key} {...optionProps}>
-                <Checkbox
-                icon={icon}
-                checkedIcon={checkedIcon}
-                style={{ marginRight: 8 }}
-                checked={selected}
-                />
-                {option.title}
+            <li key={key} {...optionProps}
+              style={{padding:'0.625rem 0.75rem',fontSize:'0.875rem',lineHeight:'1.25rem',color:'#1B242C',fontWeight:'500'}}
+            >
+              <Checkbox
+              icon={icon}
+              checkedIcon={checkedIcon}
+              style={{ marginRight: 10 }}
+              checked={selected}
+              sx={{background:'transparent', padding:'0',outlineWidth:'0'}}
+              
+              />
+              {option.title}
             </li>
             );
         }}
