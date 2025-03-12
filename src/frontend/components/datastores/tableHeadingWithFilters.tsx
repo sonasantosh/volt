@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid2';
 import SelectDropdown from '../common/selectdropdown';
 import Stack from '@mui/material/Stack';
 import Search from '../common/search'
+import GuardianDrawer from "../common/guardianDrawer";
 const TableHeadingWithFilters = () => {
   return (
     <Box className="table-heading-wrap">
@@ -23,6 +24,7 @@ const TableHeadingWithFilters = () => {
                         <Search/>
                         <SelectDropdown/>
                         <SelectDropdown/>
+                        <GuardianDrawer />
                     </Stack>
                 </Grid>
             </Grid>
