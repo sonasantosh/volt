@@ -113,7 +113,7 @@ const GuardianDrawer = () => {
         <Divider component={"li"} />
       </List>
       <Stack direction={"row"} p={2} gap={"1.25rem"} className='btn-wrapper'>
-        <Button variant="outlined" className='default-outline-button'>
+        <Button variant="outlined" className='default-outline-button' onClick={toggleDrawer(false)}>
           Cancel
         </Button>
         <Button variant="contained" className='common-button'>
