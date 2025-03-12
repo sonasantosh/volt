@@ -1,9 +1,9 @@
 import { Box } from "@mui/material"
 import Grid from '@mui/material/Grid2';
-import SelectDropdown from '../common/selectdropdown';
 import Stack from '@mui/material/Stack';
 import Search from '../common/search'
 import GuardianDrawer from "../common/guardianDrawer";
+import SelectDropdown from "../common/selectDropdown";
 const TableHeadingWithFilters = () => {
   return (
     <Box className="table-heading-wrap">
@@ -21,7 +21,7 @@ const TableHeadingWithFilters = () => {
                 <Grid size={9}> 
 
                     <Stack direction="row" spacing={2} justifyContent={"flex-end"} alignItems={'center'}>
-                        <Search/>
+                        <Search placeholder="Search" />
                         <SelectDropdown/>
                         <SelectDropdown/>
                         <GuardianDrawer />
