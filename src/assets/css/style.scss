@@ -43,6 +43,19 @@ h6 {
     color: #1B242C !important;
 }
 
+.default-outline-button {
+    border-radius: .375rem !important;
+    padding: .5rem .875rem !important;
+    gap: .375rem !important;
+    border: 1px solid #9EA8B3 !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    font-size: .875rem !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0;
+    min-width: auto !important;
+}
+
 .sidebar {
     background-image: linear-gradient(to right, #eeeafc, #f4f2fb);
     backdrop-filter: blur(.5rem);
@@ -242,6 +255,7 @@ h6 {
     box-shadow: none !important;
     letter-spacing: 0 !important;
     padding: 10px 20px !important;
+    min-width: auto !important;
 }
 
 .page-title {
@@ -297,10 +311,135 @@ h6 {
         }
     }
 }
-.myagents-list
-{
-    .subtitle
-    {
-        margin-bottom: 1rem;
+
+
+// Guardian Drawer Start
+.MuiDrawer-root {
+    .MuiBackdrop-root {
+        background-color: #00000099 !important;
+    }
+
+    .title-close-wrapper {
+        padding: 1rem;
+        border-bottom: 1px solid #DEE3E7;
+
+        .drawer-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 1.125;
+            text-transform: capitalize;
+        }
+
+        .icon-btn {
+            padding: 0;
+            width: .938rem;
+            height: .938rem;
+            color: #1B242C;
+            border-radius: 0 !important;
+            margin-left: .5rem;
+
+            img {
+                width: .938rem;
+                height: .938rem;
+            }
+
+        }
+    }
+
+    .detail-listing {
+        padding: 0 1rem !important;
+
+        .MuiListItem-root {
+            padding: 1rem 0 0 !important;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .MuiListItemText-root {
+                margin: 0;
+                padding-right: 1.25rem;
+
+                span.MuiTypography-root {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    line-height: 1.25;
+                    margin-bottom: .375rem;
+                    color: #1B242C;
+                }
+
+                p.MuiTypography-root {
+                    font-weight: 400;
+                    font-size: .875rem;
+                    line-height: 1.5;
+                    color: #555F6D;
+                }
+            }
+
+        }
+
+        .MuiDivider-fullWidth {
+            margin-top: 1rem;
+        }
+    }
+
+    .btn-wrapper {
+        .MuiButtonBase-root {
+            font-size: 1.125rem !important;
+            font-weight: 600 !important;
+            flex: 1 1 auto;
+        }
+
+        .default-outline-button {
+            border: 1px solid #1B242C !important;
+        }
+    }
+
+}
+
+// Guardian Drawer End
+
+// Datastore Item Start
+.datastore-item {
+    padding: 1.25rem;
+    border-radius: .75rem;
+    border: 1px solid #DEE3E7;
+
+    .image-wraper {
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid #DEE3E7;
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 30px;
+        }
+    }
+
+    .content-wrapper {
+        h3 {
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.25;
+            color: #1B242C;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: .875rem;
+            line-height: 1.5;
+            color: #555F6D;
+        }
+    }
+
+    .btn-wrapper{
+        .common-button{
+            font-size: 1rem !important;
+            line-height: 1.25 !important;
+        }
+            
     }
 }
+
+// Datastore Item End

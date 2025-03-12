@@ -4,7 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Grid from '@mui/material/Grid2';
-import SelectDropdownWithSearchBox from '../../components/selectDropdownWithCheckbox'
+import SelectDropdownWithSearchBox from '../common/selectDropdownWithCheckbox'
 import { Button, Box } from '@mui/material';
 import AccDatastore from '../../../assets/images/acc-datastore.svg';
 

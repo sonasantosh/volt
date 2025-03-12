@@ -12,7 +12,6 @@ const Routes = () => {
         <BrowserRouter>
             <RouterRoutes>
                 <Route path='/' element={<Sidebar />} />
-               
                 <Route path='/datastores' element={<App />}>
                     <Route index element={<NoDataStoresFound />} />
                     <Route path='create' element={<><CreateDataStores /><EnhancedTable /></>} />
