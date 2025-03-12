@@ -3,8 +3,8 @@ import Stack from '@mui/material/Stack';
 import TitleArrow from '../../../assets/images/back-arrow.svg'
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid2';
-import SelectDropdownWithSearchBox from '../../components/selectDropdownWithCheckbox'
-import Upload from '../../components/common/uploadFile'
+import SelectDropdownWithSearchBox from '../common/selectDropdownWithCheckbox'
+// import Upload from '../../components/common/uploadFile'
 import TextInput from '../../../frontend/components/common/textField'
 import { useNavigate } from 'react-router';
 const CreateDataStores = () => {
@@ -26,7 +26,7 @@ const CreateDataStores = () => {
                             <TextInput />
                         </Grid>
                         <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
-                        <Grid size={12}><Upload /></Grid>
+                        {/* <Grid size={12}><Upload /></Grid> */}
 
                     </Grid>
                 </Box>
