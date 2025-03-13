@@ -35,7 +35,7 @@ const CreateConnectors = () => {
                     </Grid>
                     <Grid size={4}>
                         <Box>
-                            <SelectDropdown />
+                            <SelectDropdown selectLabel='Authentication Method*' />
                         </Box>
                     </Grid>
                     <Grid size={4}>

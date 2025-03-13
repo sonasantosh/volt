@@ -10,6 +10,7 @@ import CreateConnectors from '../frontend/components/connectors/createConnectors
 import Datastores from '../frontend/components/datastores/datastores';
 import EditDatastores from '../frontend/components/datastores/editDatastores';
 import UpdateDatastores from '../frontend/components/datastores/updateDatastores';
+import PageNotFound from '../frontend/components/common/pageNotFound';
 
 const Routes = () => {
     return (
@@ -34,6 +35,7 @@ const Routes = () => {
                     <Route path='create' element={<CreateConnectors />} />
                 </Route>
 
+                <Route path='*' element={<PageNotFound />} />
             </RouterRoutes>
         </BrowserRouter>
     )
