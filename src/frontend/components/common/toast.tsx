@@ -1,19 +1,19 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
 import CheckCircleIcon from '../../../assets/images/success.svg';
 
 type toastProps = {
     status?: string;
+    openToast?: boolean;
 }
 
-const Toast = ({status}: toastProps) => {
+const Toast = ({ status, openToast }: toastProps) => {
 
     const [open, setOpen] = React.useState(false);
 
-    const handleClick = () => {
-        setOpen(true);
-    };
+    React.useEffect(() => {
+        openToast && setOpen(true);
+     }, [openToast])
 
     const handleClose = (
         event: React.SyntheticEvent | Event,
@@ -27,7 +27,6 @@ const Toast = ({status}: toastProps) => {
 
     return (
         <>
-            <Button onClick={handleClick}>Open Snackbar</Button>
             <Snackbar
                 anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
                 open={open}
@@ -41,5 +40,3 @@ const Toast = ({status}: toastProps) => {
 }
 
 export default Toast;
-
-{/* <Toast status='success | danger' /> */}

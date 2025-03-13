@@ -500,12 +500,8 @@ h6 {
     margin-left: -2rem;
     margin-right: -2rem;
 
-    .footer-btn-wrapper.btn-wrapper{
-        justify-content: flex-end;
-
-        button{
-            font-size: 1.125rem !important;
-            width: 140px !important;
-        }
+    button {
+        font-size: 1.125rem !important;
+        width: 140px !important;
     }
 }
