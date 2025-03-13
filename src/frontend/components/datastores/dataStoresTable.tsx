@@ -19,10 +19,10 @@ import Tooltip from '@mui/material/Tooltip';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
-import "../../assets/css/style.scss";
+import "../../../assets/css/style.scss";
 import sortIcon from '../../assets/images/sorting-icon.svg';
 import { Pagination } from '@mui/material';
-import TableHeadingWithFilters from './datastores/tableHeadingWithFilters';
+import TableHeadingWithFilters from './tableHeadingWithFilters';
 
 function createData(id, name, calories, fat, carbs, protein) {
   return {
