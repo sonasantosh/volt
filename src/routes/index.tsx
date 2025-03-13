@@ -8,6 +8,8 @@ import CreateAgents from '../frontend/components/agents/createAgents';
 import ConnectorDashboard from '../frontend/components/connectors/connectorDashboard';
 import CreateConnectors from '../frontend/components/connectors/createConnectors';
 import Datastores from '../frontend/components/datastores/datastores';
+import EditDatastores from '../frontend/components/datastores/editDatastores';
+import UpdateDatastores from '../frontend/components/datastores/updateDatastores';
 
 const Routes = () => {
     return (
@@ -17,6 +19,8 @@ const Routes = () => {
                 <Route path='/datastores' element={<App />}>
                     <Route index element={<Datastores />} />
                     <Route path='create' element={<CreateDataStores />} />
+                    <Route path='edit' element={<EditDatastores />} />
+                    <Route path='update' element={<UpdateDatastores />} />
                     <Route path='*' element={<NoDataStoresFound />} />
                 </Route>
 

@@ -8,7 +8,12 @@ import SelectDropdownWithSearchBox from '../common/selectDropdownWithCheckbox'
 import TextInput from '../../../frontend/components/common/textField'
 import { useNavigate } from 'react-router';
 
-const CreateDatastoresForm = () => {
+type CreateDatastoresFormProps = {
+    updateDataStore?: boolean;
+    title?: string;
+}
+
+const CreateDatastoresForm = ({ updateDataStore, title }: CreateDatastoresFormProps) => {
     const navigate = useNavigate();
     return (
         <Box>
@@ -17,22 +22,25 @@ const CreateDatastoresForm = () => {
                     <IconButton aria-label="arrow" className='icon-button-arrow' onClick={() => navigate("/datastores")}>
                         <Box component={'img'} src={TitleArrow} alt="BackArrow"></Box>
                     </IconButton>
-                    <Box className="page-title" component={'h1'}>Create Datastore</Box>
+                    <Box className="page-title" component={'h1'}> {title || "Create Datastore"}</Box>
                 </Stack>
             </Box>
-            <Box className="create-data-store-wrap">
-                <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={2}>
-                        <Grid size={6}>
-                            <TextInput />
+            {updateDataStore && <>update data</>}
+            {!updateDataStore &&
+                <Box className="create-data-store-wrap">
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Grid container spacing={2}>
+                            <Grid size={6}>
+                                <TextInput />
+                            </Grid>
+                            <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
+                            {/* <Grid size={12}><Upload /></Grid> */}
+
                         </Grid>
-                        <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
-                        {/* <Grid size={12}><Upload /></Grid> */}
+                    </Box>
 
-                    </Grid>
                 </Box>
-
-            </Box>
+            }
         </Box>
     )
 }

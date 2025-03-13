@@ -2,14 +2,14 @@ import CreateDatastoresForm from "./createDatastoresForm";
 import DatastoreFooter from "./datastoreFooter";
 import EnhancedTable from "./dataStoresTable";
 
-const CreateDataStores = () => {
+const EditDatastores = () => {
     return (
         <>
-            <CreateDatastoresForm title="Create Datastore" />
+            <CreateDatastoresForm title="Edit Datastore" />
             <EnhancedTable />
-            <DatastoreFooter />
+            <DatastoreFooter btn2Text="Update" />
         </>
     )
 }
 
-export default CreateDataStores
+export default EditDatastores;

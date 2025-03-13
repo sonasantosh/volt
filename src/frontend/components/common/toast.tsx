@@ -30,7 +30,7 @@ const Toast = ({ status, openToast }: toastProps) => {
             <Snackbar
                 anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
                 open={open}
-                autoHideDuration={200000}
+                autoHideDuration={3000}
                 onClose={handleClose}
                 message={<><img src={CheckCircleIcon} alt='Datastore status' /> Datastore successfully created</>}
                 className={`${status} default-toast`}

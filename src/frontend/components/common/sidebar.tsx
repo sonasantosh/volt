@@ -8,6 +8,7 @@ import AgentIcon from "../../../assets/images/agents.svg";
 import ConnectorIcon from "../../../assets/images/Connectors.svg";
 import DataStoreIcon from "../../../assets/images/dataStoreHover.svg";
 import ApiReferenceIcon from "../../../assets/images/api-refference.svg";
+import TokenCoin from "../../../assets/images/token-coin.svg";
 import SettingIcon from "../../../assets/images/setting.svg";
 import UserAvatar from '../../../assets/images/profile-img.png';
 import List from '@mui/material/List';
@@ -100,6 +101,15 @@ const Sidebar = () => {
                 </Collapse>
             </List>
             <Box className="user-theme-wrapper">
+                <Stack direction={"row"} gap={".385rem"} alignItems={"center"} className='sidebar-token'>
+                    <img src={TokenCoin} alt='3.5K Token Left' />
+                    <Box component={"span"}>
+                        3.5K
+                        <Box component={"span"} className='collapsed'>
+                            Token Left
+                        </Box>
+                    </Box>
+                </Stack>
                 <Stack direction={"row"} gap={"0.75rem"} alignItems={"center"}>
                     <Avatar
                         alt="Remy Sharp"
