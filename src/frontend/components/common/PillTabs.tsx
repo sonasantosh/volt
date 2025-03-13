@@ -64,8 +64,8 @@ export default function FullWidthTabs() {
        
         >
           <Tab label="Open AI" {...a11yProps(0)} />
-          <Tab label="Anthropic" {...a11yProps(1)} />
-          <Tab label="Google" {...a11yProps(2)} />
+          <Tab label="Anthropic" {...a11yProps(1)}   disabled />
+          <Tab label="Google" {...a11yProps(2)}   disabled />
         </Tabs>
       </AppBar>
 

@@ -9,6 +9,10 @@ $p-20:1.25rem;
 //content-color
 $paragraph-color: #555F6D;
 
+body
+{
+    overflow: hidden;
+}
 // Common Css
 h2
 {
@@ -22,6 +26,7 @@ h3
 {
     font-size: 1rem;
     line-height: 2rem;
+    font-weight: 600;
 }
 p
 {
@@ -31,6 +36,34 @@ p
     line-height: 1.125rem;
 }
 
+.main-wrapper {
+    padding: 1.5rem 2rem;
+    flex-grow: 1;
+    max-height: calc(100vh - 63px);
+    overflow-y: auto;
+}
+
+.subtitle
+{
+    margin-bottom: 16px;
+}
+.bottomfixed-btn
+{
+    position: fixed;
+    bottom: 0;
+    right: 16px;
+    background: #fff;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+    z-index: 0;
+    .MuiButtonBase-root
+    {
+        min-width: 140px !important;
+        font-size: 18px !important;
+    }
+}
 .agentcard
 {
     background-color: $cardbg;
@@ -127,6 +160,48 @@ button.outlinebtn
 .accordion-container
 {
     margin-top: 1rem;
+    .MuiAccordionDetails-root
+    {
+        padding: 16px;
+
+        .uploadfile-wrap
+        {
+            label
+            {
+                width: 100%;
+                background-color: transparent;
+                box-shadow: none;
+                border: 2px dotted #9EA8B3;
+                min-height: 118px;
+                border-radius: 8px;
+                letter-spacing: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 16px;
+                align-content: center;
+                gap: 8px;
+
+                .filetext-wrap {
+                    color: #333;
+                    font-size: 1rem;
+                    line-height: 1.75rem;
+                    font-family: "inter", sans-serif;
+                    font-weight: 400;
+                    text-transform: none;
+                    width: 100%;
+                    text-align: center;
+                    
+                    .filesub-text {
+                        font-size: 12px;
+                        line-height: 1rem;
+                        color: #555F6D;
+                    }
+                }
+            }
+        }
+    }
 
     .MuiAccordion-root
     {
@@ -221,6 +296,7 @@ button.outlinebtn
 
     h3{
         line-height: 28px;
+        font-weight: 600;
     }
     }
 }
@@ -357,8 +433,16 @@ padding: 0  !important;
     border: none;
     box-shadow: none;
     }
+    .MuiBox-root
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
     .MuiButtonBase-root
     {
+        text-transform: capitalize;
+        font-size: 14px;
         &.Mui-selected
         {
             background-color: #2E4ACD;
@@ -388,5 +472,65 @@ padding: 0  !important;
         height: auto;
         letter-spacing: 0;
     }
+    p {
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 400;
+        font-family: "inter", sans-serif;
+        color: #1B242C;
+        margin: 0 0 4px 0;
+    }
 }
+
+.activeinactive-container
+{
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        gap: 16px;
+
+    .inactivecard {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        opacity: .5;
+        padding:0 10px;
+        min-height: 40px;
+        width: calc(33.33% - 10px);
+        font-size: 15px;
+
+        &.SlectedBox
+        {
+            opacity: 1;
+            background-color: #2E4ACD29;
+        color: #1B242C;
+        border: solid 1px #2E4ACD;
+        border-radius: 6px;
+        .circle
+        {
+            display: none;
+        }
+        }
+       
+    }
+    .namewithtooltip
+    {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #1B242C;
+    }
+    .circle
+{
+    background: white;
+    border: solid 1px #1B242C;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+}
+
 
