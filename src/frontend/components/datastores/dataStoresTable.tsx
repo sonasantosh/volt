@@ -23,15 +23,16 @@ import "../../../assets/css/style.scss";
 import sortIcon from '../../assets/images/sorting-icon.svg';
 import { Pagination } from '@mui/material';
 import TableHeadingWithFilters from './tableHeadingWithFilters';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 
-function createData(id, name, calories, fat, carbs, protein) {
+function createData(id, name, format, size, connectors, connectionName) {
   return {
     id,
     name,
-    calories,
-    fat,
-    carbs,
-    protein,
+    format,
+    size,
+    connectors,
+    connectionName,
   };
 }
 
@@ -73,30 +74,39 @@ const headCells = [
     numeric: false,
     disablePadding: true,
     label: 'Name',
+    width: 'auto',
   },
   {
     id: 'format',
     numeric: true,
     disablePadding: false,
+    disableFilter: true,
     label: 'Format',
+    width: '8.125rem',
   },
   {
     id: 'size',
     numeric: true,
     disablePadding: false,
+    disableFilter: true,
     label: 'Size',
+    width: '8.125rem',
   },
   {
     id: 'connector',
     numeric: true,
     disablePadding: false,
+    disableFilter: true,
     label: 'Connector',
+    width: '8.125rem',
   },
   {
     id: 'connectionName',
     numeric: true,
     disablePadding: false,
+    disableFilter: true,
     label: 'Connection Name',
+    width: '12.5rem',
   },
 ];
 
@@ -109,40 +119,47 @@ function EnhancedTableHead(props) {
 
   return (
     <>
-    <TableHead>
-      <TableRow>
-        <TableCell padding="checkbox">
-          <Checkbox
-            color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            inputProps={{
-              'aria-label': 'select all desserts',
-            }}
-          />
-        </TableCell>
-        {headCells.map((headCell) => (
-          <TableCell
-            key={headCell.id}
-            sortDirection={orderBy === headCell.id ? order : false}
-          >
-            <TableSortLabel
-              active={orderBy === headCell.id}
-              direction={orderBy === headCell.id ? order : 'asc'}
-              onClick={createSortHandler(headCell.id)}
-            >
-              {headCell.label}
-              {orderBy === headCell.id ? (
-                <Box component="span" sx={visuallyHidden}>
-                  {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                </Box>
-              ) : null}
-            </TableSortLabel>
+      <TableHead>
+        <TableRow>
+          <TableCell padding="checkbox">
+            <Checkbox
+              color="primary"
+              indeterminate={numSelected > 0 && numSelected < rowCount}
+              checked={rowCount > 0 && numSelected === rowCount}
+              onChange={onSelectAllClick}
+              size='small'
+              icon={<CheckBoxOutlineBlankIcon sx={{ '& path': { stroke: '#fff', }, }} />}
+              inputProps={{
+                'aria-label': 'select all desserts',
+              }}
+            />
           </TableCell>
-        ))}
-      </TableRow>
-    </TableHead>
+          {headCells.map((headCell) => (
+            <TableCell
+              key={headCell.id}
+              sortDirection={orderBy === headCell.id ? order : false}
+              sx={{ width: headCell.width }}
+            >
+              {headCell.disableFilter ? (
+                headCell.label 
+              ) : (
+                <TableSortLabel
+                  active={orderBy === headCell.id}
+                  direction={orderBy === headCell.id ? order : 'asc'}
+                  onClick={createSortHandler(headCell.id)}
+                >
+                  {headCell.label}
+                  {orderBy === headCell.id ? (
+                    <Box component="span" sx={visuallyHidden}>
+                      {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                    </Box>
+                  ) : null}
+                </TableSortLabel>
+              )}
+            </TableCell>
+          ))}
+        </TableRow>
+      </TableHead>
     </>
   );
 }
@@ -213,7 +230,7 @@ EnhancedTableToolbar.propTypes = {
 
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState('asc');
-  const [orderBy, setOrderBy] = React.useState('calories');
+  const [orderBy, setOrderBy] = React.useState('format');
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
@@ -317,6 +334,8 @@ export default function EnhancedTable() {
                       <Checkbox
                         color="primary"
                         checked={isItemSelected}
+                        size='small'
+                        icon={<CheckBoxOutlineBlankIcon sx={{ '& path': { stroke: '#fff', }, }} />}
                         inputProps={{
                           'aria-labelledby': labelId,
                         }}
@@ -329,10 +348,10 @@ export default function EnhancedTable() {
                     >
                       {row.name}
                     </TableCell>
-                    <TableCell>{row.calories}</TableCell>
-                    <TableCell>{row.fat}</TableCell>
-                    <TableCell>{row.carbs}</TableCell>
-                    <TableCell>{row.protein}</TableCell>
+                    <TableCell>{row.format}</TableCell>
+                    <TableCell>{row.size}</TableCell>
+                    <TableCell>{row.connectors}</TableCell>
+                    <TableCell>{row.connectionName}</TableCell>
                   </TableRow>
                 );
               })}
@@ -340,14 +359,14 @@ export default function EnhancedTable() {
           </Table>
         </TableContainer>
         <Box className="table-pagination">
-            <Box>
-              <p className='table-data-showing'>
-                Showing 10 out of 20 Records
-              </p>
-            </Box>
-            <Box>
-                <Pagination count={10} />
-            </Box>
+          <Box>
+            <p className='table-data-showing'>
+              Showing 10 out of 20 Records
+            </p>
+          </Box>
+          <Box>
+            <Pagination count={10} />
+          </Box>
         </Box>
       </Paper>
     </Box>

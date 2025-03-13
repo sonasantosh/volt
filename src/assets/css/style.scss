@@ -158,7 +158,9 @@ h6 {
         flex-direction: column;
         gap: 20px;
 
-        .MuiButtonBase-root {
+        .MuiButtonBase-root,
+        .sidebar-link {
+
             gap: .75rem;
             border-radius: .375rem;
             padding: 0 .875rem;
@@ -168,8 +170,13 @@ h6 {
             letter-spacing: 0;
             background-color: transparent;
             height: 2.5rem;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #4A545E;
 
-            &:hover {
+            &:hover,
+            &.active {
                 box-shadow: 0px 4px 10px 0px #0000000F;
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 95%);
                 color: #1B242C;
@@ -533,4 +540,53 @@ h6 {
     line-height: 1.75rem;
     height: auto;
     padding: 10px 12px;
+}
+
+// Default Tab
+.custom-default-tab {
+    background-color: #F1F3F5;
+    padding: .25rem;
+    border-radius: 2.5rem;
+    max-width: 30.625rem;
+
+    .MuiTabs-root {
+        min-height: auto;
+
+        .MuiTabs-indicator {
+            display: none;
+        }
+
+        .Mui-disabled {
+            &.MuiButtonBase-root {
+                display: none;
+            }
+        }
+
+
+        .MuiButtonBase-root {
+            padding: .25rem 1rem;
+            font-weight: 500;
+            font-size: .875rem;
+            line-height: 1.625;
+            text-align: center;
+            color: #555F6D;
+            min-width: 4.25rem;
+            min-height: auto;
+
+            &.Mui-selected {
+                box-shadow: 0px 0px 4px 0px #00000014;
+                background: #FFFFFF;
+                color: #1B242C;
+                border-radius: 2.5rem;
+            }
+
+            &.MuiTabs-scrollButtons {
+                min-width: auto;
+                opacity: 0.5;
+                padding: 0.25rem;
+                max-width: max-content;
+            }
+        }
+
+    }
 }
