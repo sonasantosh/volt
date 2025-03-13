@@ -6,6 +6,8 @@ import EnhancedTable from '../frontend/components/dataStoresTable';
 import Sidebar from '../frontend/components/common/sidebar';
 import AgentsList from '../frontend/components/agents/agentsDashboard';
 import CreateAgents from '../frontend/components/agents/createAgents';
+import ConnectorDashboard from '../frontend/components/connectors/connectorDashboard';
+import CreateConnectors from '../frontend/components/connectors/createConnectors';
 
 const Routes = () => {
     return (
@@ -20,6 +22,11 @@ const Routes = () => {
                 <Route path='/agent'  element={<App />}>
                     <Route index element={<AgentsList/>} /> 
                     <Route path='create' element={<CreateAgents />} />
+                </Route>
+
+                <Route path='/connectors'  element={<App />}>
+                    <Route index element={<ConnectorDashboard/>} /> 
+                    <Route path='create' element={<CreateConnectors />} />
                 </Route>
 
             </RouterRoutes>

@@ -1,5 +1,5 @@
 
-import { Box, Checkbox, FormControlLabel, List, ListItem, ListItemText, Stack, TextField, Typography } from '@mui/material';
+import { Box, Checkbox, FormControlLabel, List, ListItem, ListItemText, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
 import * as React from 'react';
 
@@ -34,6 +34,22 @@ const ConnectorDashboard = () => {
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
+
+    const rows = [
+        createData('QPM Connection 1', '24 March 2025', 15, <span className='table-badge'>Connected</span>, 4.0),
+        createData('QPM Connection 2', '24 March 2025', 15, <span className='table-badge'>Connected</span>, 4.3), 
+    ];
+
+    function createData(
+        name: string,
+        calories: string,
+        fat: number,
+        carbs: string,
+        protein: number,
+      ) {
+        return { name, calories, fat, carbs, protein };
+      }
+
     return (
         <Box>
             <Box className="title-with-arrow">
@@ -51,7 +67,7 @@ const ConnectorDashboard = () => {
                     <Box component={'p'}>Please choose a connector to proceed.</Box>  
                     
                     <Box className="connector-creator-logo">
-                        <Box className="creator-logo-card">
+                        <Box className="creator-logo-card" onClick={() => navigate("create")}>
                             <img src={s3Logo} />
                             <Typography>S3</Typography>
                         </Box>
@@ -166,10 +182,37 @@ const ConnectorDashboard = () => {
                             </Box>
                             </AccordionSummary>
                             <AccordionDetails>
-                            <Typography>
-                                Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-                                Aliquam eget maximus est, id dignissim quam.
-                            </Typography>
+                                <Box className="add-connector-table">
+                                    <TableContainer>
+                                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                                            <TableHead>
+                                            <TableRow>
+                                                <TableCell>Connector name</TableCell>
+                                                <TableCell align="left">Created on</TableCell>
+                                                <TableCell align="left">Total files</TableCell>
+                                                <TableCell align="left">Status</TableCell>
+                                                <TableCell align="left">Action</TableCell>
+                                            </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                            {rows.map((row) => (
+                                                <TableRow
+                                                key={row.name}
+                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                >
+                                                <TableCell >
+                                                    {row.name}
+                                                </TableCell>
+                                                <TableCell align="left">{row.calories}</TableCell>
+                                                <TableCell align="left">{row.fat}</TableCell>
+                                                <TableCell align="left">{row.carbs}</TableCell>
+                                                <TableCell align="left">{row.protein}</TableCell>
+                                                </TableRow>
+                                            ))}
+                                            </TableBody>
+                                        </Table>
+                                    </TableContainer>
+                                </Box>
                             </AccordionDetails>
                             </Accordion> 
                         </Box>
