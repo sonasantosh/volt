@@ -5,8 +5,10 @@ import Search from '../common/search'
 import GuardianDrawer from "../common/guardianDrawer";
 import SelectDropdown from "../common/selectDropdown";
 import AddIcon from "../../../assets/images/plus-icon.svg";
+import { useNavigate } from "react-router";
 
 const TableHeadingWithFilters = () => {
+  const navigate = useNavigate();
   return (
     <Box className="table-heading-wrap">
       <Box sx={{ flexGrow: 1 }}>
@@ -30,6 +32,7 @@ const TableHeadingWithFilters = () => {
               <Button
                 variant="outlined"
                 className='default-outline-button add-btn'
+                onClick={()=> navigate("/datastores/update")}
               >
                 <img src={AddIcon} alt="Add/Edit Data" />
                 Add/Edit Data
