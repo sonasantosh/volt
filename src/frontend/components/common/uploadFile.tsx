@@ -27,7 +27,7 @@ export default function InputFileUpload() {
       >
         <Box className="filetext-wrap">
           Drag & drop file or <Box component={'span'} sx={{color:'#2E4ACD'}} className='file-browse'>Browse</Box>
-          {/* <Box component="div" className='filesub-text'>PNG, JPG, GIF up to 5MB</Box> */}
+          <Box component="div" className='filesub-text'>PNG, JPG, GIF up to 5MB</Box>
         </Box>
         <VisuallyHiddenInput
           type="file"

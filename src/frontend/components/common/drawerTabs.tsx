@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Search from '../common/search';
 import DatafileIcon from '../../../assets/images/file.svg'
 import viewIcon from '../../../assets/images/viewicon.svg'
+import { Padding } from '@mui/icons-material';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -64,19 +65,21 @@ export default function FullWidthTabs() {
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
-         variant="scrollable"
-         scrollButtons="auto"
-          aria-label="full width tabs example"       
+            variant="scrollable"
+            scrollButtons={false}
+            aria-label="full width tabs example"   
+          
        
         >
           <Tab label="Search Datastore" {...a11yProps(0)} />
-          <Tab label="HR Document Search Datastore " {...a11yProps(1)} />
-          <Tab label="Company Policy" {...a11yProps(2)} />
+          <Tab label="HR Document Search Datastore " {...a11yProps(1)} disabled/>
+          <Tab label="Company Policy" {...a11yProps(2)} disabled/>
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0} dir={theme.direction}>
 
-        <Box className="tabs-searchfilter">
+      <TabPanel value={value} index={0}>
+
+        <Box className="tabs-searchfilter" dir={theme.direction}>
         <FormGroup>
             <FormControlLabel control={<Checkbox  color="primary"/>} label="Select All" />
         </FormGroup>
