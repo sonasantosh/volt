@@ -201,6 +201,7 @@ button.outlinebtn
         {
             padding: 10px !important;
         }
+        
         }
         .filesbtn
         {
@@ -209,6 +210,18 @@ button.outlinebtn
             padding: 10px 20px;
             color: #1B242C;
         }
+    }
+    .switchbox
+    {border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3{
+        line-height: 28px;
+    }
     }
 }
 .common-button {
@@ -226,12 +239,12 @@ button.outlinebtn
     letter-spacing: 0 !important;
     padding: 10px 20px !important;
 }
-
+// DrawersTabs
 .drawersTabs-container
 {
     .MuiAppBar-root
     {
-        --Paper-shadow: none;
+    --Paper-shadow: none;
     background: #F1F3F5;
     border: none;
     box-shadow: none;
@@ -245,6 +258,10 @@ button.outlinebtn
         border-bottom: none;
         margin: 3px 0;
     }
+    }
+    .MuiTabs-indicator
+    {
+        background-color: transparent;
     }
 }
 .tabs-searchfilter {
@@ -301,6 +318,7 @@ button.outlinebtn
         }
     }
 }
+
 .filetype-wrap
 {
 display: flex;
@@ -329,4 +347,46 @@ padding: 0  !important;
 }
 }
 
+// PillsTab
+.pill-tabs
+{
+    .MuiAppBar-root
+    {
+    --Paper-shadow: none;
+    background:transparent;
+    border: none;
+    box-shadow: none;
+    }
+    .MuiButtonBase-root
+    {
+        &.Mui-selected
+        {
+            background-color: #2E4ACD;
+            border-radius: 50px;
+            border-bottom: none;
+            margin: 3px 0;
+            color: #fff;
+            min-height: 40px;
+    }
+    
+    }
+    .MuiTabs-indicator
+    {
+        background-color: transparent;
+    }
+}
+.inputwrap 
+{
+    textarea
+    {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+        font-family: "inter", sans-serif;
+        color: #1B242C;
+        padding: 0.625rem 1rem;
+        height: auto;
+        letter-spacing: 0;
+    }
+}
 
