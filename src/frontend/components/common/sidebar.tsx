@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, IconButton, Stack, Avatar, ToggleButtonGroup, ToggleButton } from '@mui/material';
-import { Link, useNavigate } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import Logo from "../../../assets/images/Logo.svg";
 import SmallLogo from "../../../assets/images/logo-icon.svg"
 import ToggleIcon from "../../../assets/images/humbergur.svg";
@@ -12,7 +12,6 @@ import TokenCoin from "../../../assets/images/token-coin.svg";
 import SettingIcon from "../../../assets/images/setting.svg";
 import UserAvatar from '../../../assets/images/profile-img.png';
 import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
@@ -26,8 +25,6 @@ const Sidebar = () => {
     const [sidebarOpen, setSidebarOpen] = useState<Boolean>(true);
     const [openSubMenu, setOpenSubMenu] = useState(false);
     const [themeSelector, setThemeSelector] = useState('light');
-
-    const navigate = useNavigate();
 
     const handleMenuClick = () => {
         setOpenSubMenu(!openSubMenu);
@@ -58,45 +55,45 @@ const Sidebar = () => {
                 component="nav"
                 aria-labelledby="nested-list-subheader"
             >
-                <ListItemButton onClick={() => navigate("/agent")}>
+                <NavLink to="/agent" className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}>
                     <ListItemIcon>
                         <img src={AgentIcon} alt='Agent' />
                     </ListItemIcon>
                     <ListItemText primary="Agents" />
-                </ListItemButton>
-                <ListItemButton onClick={() => navigate("/connectors")}>
+                </NavLink>
+                <NavLink to="/connectors" className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}>
                     <ListItemIcon>
                         <img src={ConnectorIcon} alt='Connectors' />
                     </ListItemIcon>
                     <ListItemText primary="Connectors" />
-                </ListItemButton>
-                <ListItemButton onClick={() => navigate("/datastores")}>
+                </NavLink>
+                <NavLink to="/datastores" className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}>
                     <ListItemIcon>
                         <img src={DataStoreIcon} alt='Datastores' />
                     </ListItemIcon>
                     <ListItemText primary="Datastores" />
-                </ListItemButton>
-                <ListItemButton onClick={() => navigate("/api-reference")}>
+                </NavLink>
+                <NavLink to="/api-reference" className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}>
                     <ListItemIcon>
                         <img src={ApiReferenceIcon} alt='Api Reference' />
                     </ListItemIcon>
                     <ListItemText primary="API References" />
-                </ListItemButton>
-                <ListItemButton onClick={handleMenuClick}>
+                </NavLink>
+                <Link to={"/"} className='sidebar-link' onClick={handleMenuClick}>
                     <ListItemIcon>
                         <img src={SettingIcon} alt='Setting' />
                     </ListItemIcon>
                     <ListItemText primary="Settings" />
                     {openSubMenu ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                </ListItemButton>
+                </Link>
                 <Collapse in={openSubMenu} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
+                        <NavLink className={"sidebar-link"} to={"/"} style={{ paddingLeft: 4 }}>
                             <ListItemIcon>
                                 <img src={SettingIcon} alt='Setting' />
                             </ListItemIcon>
                             <ListItemText primary="Link1" />
-                        </ListItemButton>
+                        </NavLink>
                     </List>
                 </Collapse>
             </List>
