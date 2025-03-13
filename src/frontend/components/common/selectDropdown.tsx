@@ -14,6 +14,7 @@ export default function SelectDropdown() {
 
   return (
     <Box sx={{ minWidth: 200 }} className="inputwrap selectdropdown">
+      <Box component="p">Connections <Box component="span" className='required-sign'>*</Box></Box>
       <FormControl fullWidth>
         <Select
           labelId="demo-simple-select-label"

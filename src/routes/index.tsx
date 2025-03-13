@@ -6,6 +6,8 @@ import Sidebar from '../frontend/components/common/sidebar';
 import AgentsList from '../frontend/components/agents/agentsDashboard';
 import CreateAgents from '../frontend/components/agents/createAgents';
 import ConnectorDashboard from '../frontend/components/connectors/connectorDashboard';
+import CreateConnectors from '../frontend/components/connectors/createConnectors';
+import Datastores from '../frontend/components/datastores/datastores';
 
 const Routes = () => {
     return (
@@ -13,8 +15,9 @@ const Routes = () => {
             <RouterRoutes>
                 <Route path='/' element={<Sidebar />} />
                 <Route path='/datastores' element={<App />}>
-                    <Route index element={<NoDataStoresFound />} />
+                    <Route index element={<Datastores />} />
                     <Route path='create' element={<CreateDataStores />} />
+                    <Route path='*' element={<NoDataStoresFound />} />
                 </Route>
 
                 <Route path='/agent' element={<App />}>
@@ -24,6 +27,7 @@ const Routes = () => {
 
                 <Route path='/connectors' element={<App />}>
                     <Route index element={<ConnectorDashboard />} />
+                    <Route path='create' element={<CreateConnectors />} />
                 </Route>
 
             </RouterRoutes>
