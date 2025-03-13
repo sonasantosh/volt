@@ -7,6 +7,13 @@ import Grid from '@mui/material/Grid2';
 import SelectDropdownWithSearchBox from '../common/selectDropdownWithCheckbox'
 import { Button, Box } from '@mui/material';
 import AccDatastore from '../../../assets/images/acc-datastore.svg';
+import AccGuardrails from '../../../assets/images/acc-guardrails.svg';
+import AccLlm from '../../../assets/images/acc-LLM.svg';
+import AccSettings from '../../../assets/images/acc-advance-settings.svg';
+import ViewFilesDrawer from '../common/viewFilesDrawer';
+import Upload from '../../components/common/uploadFile'
+import PillTabs from '../common/PillTabs';
+
 
 export default function AccordionExpandDefault() {
   return (
@@ -25,7 +32,10 @@ export default function AccordionExpandDefault() {
                 <Grid size={6}>  
                     <Grid size={12} className="multiselect-container">                
                     <SelectDropdownWithSearchBox />
-                    <Button variant="outlined" className='filesbtn'>View Files</Button>    
+                    {/* <Button variant="outlined" className=''>
+                         
+                        </Button>     */}
+                  <ViewFilesDrawer />
                     </Grid>               
                 </Grid>
                 <Grid size={6} className="accordian-btn-end">
@@ -34,13 +44,51 @@ export default function AccordionExpandDefault() {
             </Grid>
         </AccordionDetails>
       </Accordion>
+
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          <Typography component="span">Header</Typography>
+          <Box component={'img'} src={AccGuardrails} alt="NoDataStore" />
+          <Typography component="span">Guardrails</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Grid container spacing={2}>
+            <Grid size={6}><Upload /></Grid>
+            <Grid size={6}><Upload /></Grid>
+            </Grid>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          <Box component={'img'} src={AccLlm} alt="NoDataStore" />
+          <Typography component="span">LLM</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+         <Box>
+          <Box component={'h3'}> LLM</Box>
+          <Box>
+           <PillTabs/>
+          </Box>
+         </Box>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          <Box component={'img'} src={AccSettings} alt="NoDataStore" />
+          <Typography component="span">Advance Settings</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -48,7 +96,7 @@ export default function AccordionExpandDefault() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </Typography>
         </AccordionDetails>
-      </Accordion>
+      </Accordion>  
     </div>
   );
 }

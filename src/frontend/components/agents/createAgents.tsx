@@ -3,8 +3,9 @@ import Stack from '@mui/material/Stack';
 import TitleArrow from '../../../assets/images/back-arrow.svg'
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid2';
-import TextInput from '../../../frontend/components/common/textField'
-import Accordion from '../../../frontend/components/common/accordion'
+import TextInput from '../../../frontend/components/common/textField';
+import Accordion from '../../../frontend/components/common/accordion';
+import GuardianDrawer from "../common/guardianDrawer";
 import { useNavigate } from 'react-router';
 
 const CreateAgents = () => {
@@ -47,6 +48,7 @@ const CreateAgents = () => {
 
         <Box className="accordion-container">
         <Accordion></Accordion>
+      
         </Box>
         </Box>
     )
