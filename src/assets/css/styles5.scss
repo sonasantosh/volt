@@ -1,0 +1,392 @@
+@use "../css/variables" as *;
+
+// Background-color
+$cardbg:#F5F7F9;
+
+// Spacing
+$p-20:1.25rem;
+
+//content-color
+$paragraph-color: #555F6D;
+
+// Common Css
+h2
+{
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: #1B242C;
+}
+
+h3
+{
+    font-size: 1rem;
+    line-height: 2rem;
+}
+p
+{
+    font-size:0.875rem;
+    font-weight: 500;
+    color: #555F6D;
+    line-height: 1.125rem;
+}
+
+.agentcard
+{
+    background-color: $cardbg;
+    padding: $p-20;
+    border-radius: 12px;
+    display: block;
+    color: #1b242c !important;
+   
+ 
+}
+.listwrap
+{
+    border: solid 1px #DEE3E7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    img
+    {
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        width: 100%;
+    }
+}
+.addmorewrap-container
+{
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    &::after
+    {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #CFD6DD;  
+        z-index: 1;
+        top: 50%;
+
+    }
+    a
+    {
+        color: #1b242c;
+    }
+.addmorewrap
+{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        position: relative;
+       
+
+        img
+        {
+            background-color: #fff;
+            padding: 0 5px 0 10px;
+        }
+        span
+        {
+            background-color: #fff;
+            padding: 0 10px 0 0;
+        }
+       
+}
+}
+.btn-endplacement
+{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+button.outlinebtn
+{
+    border: solid 1px #1B242C !important;
+    color: #1B242C !important;
+    opacity: .5;
+    padding: 5px 20px;
+    margin: 1rem 0 0 0;
+    text-align: right;
+    display: block;
+    text-transform: capitalize;
+}
+}
+.accordion-container
+{
+    margin-top: 1rem;
+
+    .MuiAccordion-root
+    {
+        border-radius:8px !important;
+        box-shadow: none;
+        margin-bottom: 10px;
+        background: #F5F7F9;        
+
+        &.Mui-expanded {
+            border: solid 1px #DEE3E7;
+            min-height: 48px;
+        }
+
+        &::before
+        {
+            background-color: transparent !important;
+        }
+        .MuiAccordionSummary-root
+        {
+            &.Mui-expanded {
+                min-height: 48px;
+            }   
+        }
+        .MuiCollapse-entered {
+            background: #fff;
+            border-top: solid 1px #DEE3E7;
+            border-radius:0 0 8px 8px !important;
+        }
+    }
+
+    .MuiAccordionSummary-content
+{
+    .MuiTypography-root
+    {
+        
+        font-size: 1rem;
+        font-weight: 500 !important;
+        line-height: 24px;
+        color: #1B242C;
+        padding:0 0 0 10px;
+    }
+    &.Mui-expanded {
+        margin: 0;
+    }   
+}
+    .MuiAccordion-root:last-of-type, .MuiAccordion-root:first-of-type
+    {
+        border-radius: 0;
+    }
+
+    
+    .accordionbody-content
+    {
+        align-items: end;
+        .accordian-btn-end
+        {
+            display: flex;
+            justify-content: end;
+        }
+        .multiselect-container
+        {
+            display: flex;
+            align-items: end;
+            gap: 16px;
+            width: 100%;
+        }
+        .inputwrap
+        {
+            width: 100%;
+        
+            input
+        {
+            padding: 10px !important;
+        }
+        
+        }
+        .filesbtn
+        {
+            white-space: nowrap;
+            border: solid 1px #1B242C;
+            padding: 10px 20px;
+            color: #1B242C;
+        }
+    }
+    .switchbox
+    {border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3{
+        line-height: 28px;
+    }
+    }
+}
+.common-button {
+    background: linear-gradient(180deg, #2E4ACD 0%, #4364FF 100%) !important;
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #5876FF 0%, #2641BE 100%);
+    border-radius: 8px !important;
+    color: #fff;
+    font-size: 18px !important;
+    line-height: 30px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    font-family: 'Inter', sans-serif !important;
+    box-shadow: none !important;
+    letter-spacing: 0 !important;
+    padding: 10px 20px !important;
+}
+// DrawersTabs
+.drawersTabs-container
+{
+    .MuiAppBar-root
+    {
+    --Paper-shadow: none;
+    background: #F1F3F5;
+    border: none;
+    box-shadow: none;
+    }
+    .MuiButtonBase-root
+    {
+        &.Mui-selected
+        {
+        background-color: #fff;
+        border-radius: 50px;
+        border-bottom: none;
+        margin: 3px 0;
+    }
+    }
+    .MuiTabs-indicator
+    {
+        background-color: transparent;
+    }
+}
+.tabs-searchfilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabscontent-card
+{
+    border: solid 1px #ccc;
+    padding:16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    .MuiCheckbox-root
+
+    {
+        padding: 0;
+    }
+    .cardcontent-wrapper
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .leftSec
+        {
+            display: flex;
+            align-items: center;
+            gap:5px;
+
+            .fileicons-box
+            {
+                line-height: 1;
+                background: #2E4ACD1A;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 3px;
+                padding: 0 !important;
+            }
+            h3
+            {
+                line-height: 1;
+            }
+        }
+
+        .rightSec
+        {
+            display: flex;
+            align-items: center;
+            gap:3px;
+        }
+    }
+}
+
+.filetype-wrap
+{
+display: flex;
+align-items: center;
+padding: 0  !important;
+.MuiMenuItem-root
+{
+    padding: 0 5px 0 10px;
+    position: relative;
+
+
+    &::after
+    {
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: #9EA8B3;
+        border-radius: 20px;
+        left:  0;
+    }
+    .MuiListItemText-inset
+    {
+    padding: 0;
+}
+}
+}
+
+// PillsTab
+.pill-tabs
+{
+    .MuiAppBar-root
+    {
+    --Paper-shadow: none;
+    background:transparent;
+    border: none;
+    box-shadow: none;
+    }
+    .MuiButtonBase-root
+    {
+        &.Mui-selected
+        {
+            background-color: #2E4ACD;
+            border-radius: 50px;
+            border-bottom: none;
+            margin: 3px 0;
+            color: #fff;
+            min-height: 40px;
+    }
+    
+    }
+    .MuiTabs-indicator
+    {
+        background-color: transparent;
+    }
+}
+.inputwrap 
+{
+    textarea
+    {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+        font-family: "inter", sans-serif;
+        color: #1B242C;
+        padding: 0.625rem 1rem;
+        height: auto;
+        letter-spacing: 0;
+    }
+}
+
