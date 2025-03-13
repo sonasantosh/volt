@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, TextField } from '@mui/material';
 import SearchIcon from '../../../assets/images/search-icon.svg';
 import InputAdornment from '@mui/material/InputAdornment';
 
-export default function SearchField() {
-  const [searchText, setSearchText] = useState("");
+type searchFieldProps = {
+  placeholder?: string;
+  label?: string;
+}
 
-  const handleSearchChange = (event) => {
-    setSearchText(event.target.value);
-  };
+export default function SearchField({placeholder, label}:searchFieldProps) {
+  const [searchText, setSearchText] = useState("");
 
   return (
     <Box className="search-input">
     <TextField
-    //   label="Search"
+      label={label && label}
       variant="filled"
       value={searchText}
-      onChange={handleSearchChange}
-      placeholder='Search'
+      onChange={(e)=>setSearchText(e.target.value)}
+      placeholder={placeholder && placeholder}
       fullWidth
       slotProps={{
         input: {
