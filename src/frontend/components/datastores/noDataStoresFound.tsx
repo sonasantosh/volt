@@ -15,7 +15,7 @@ const NoDataStoresFound = () => {
           <Box component={'h1'}>No Datastores Found</Box>
           <Box component={'p'}>No datastore has been created yet. Click the
             "Create datastore" button to create one.</Box>
-          <Button variant="contained" className='common-button' onClick={() => navigate("create")}>Create Datastore</Button>
+          <Button variant="contained" className='common-button' onClick={() => navigate("/datastores/create")}>Create Datastore</Button>
         </Box>
       </Box>
     </Box>

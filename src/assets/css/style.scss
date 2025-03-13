@@ -59,7 +59,8 @@ h6 {
 .sidebar {
     background-image: linear-gradient(to right, #eeeafc, #f4f2fb);
     backdrop-filter: blur(.5rem);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -105,6 +106,19 @@ h6 {
         }
 
         .user-theme-wrapper {
+
+            .sidebar-token {
+                padding: .385rem;
+                gap: .25rem !important;
+                margin-left: -.5rem !important;
+                margin-right: -.5rem !important;
+                width: auto;
+
+                .collapsed {
+                    display: none;
+                }
+            }
+
             .user-name {
                 display: none;
             }
@@ -177,6 +191,16 @@ h6 {
         gap: 1.5rem;
         color: #1B242C;
 
+        .sidebar-token {
+            width: 100%;
+            background: linear-gradient(102.34deg, #FFD256 10.62%, #FFB96E 88.06%);
+            padding: .75rem 1rem;
+            border-radius: 3.125rem;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1;
+        }
+
         .user-image {
             width: 2.5rem;
             height: 2.5rem;
@@ -236,8 +260,15 @@ h6 {
 }
 
 .main-wrapper {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem 0;
     flex-grow: 1;
+    width: calc(100% - 16.875rem);
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 }
 
 
@@ -479,11 +510,28 @@ h6 {
     }
 }
 
-.search-create-btn-wrapper{
-    .common-button{
+.search-create-btn-wrapper {
+    .common-button {
         padding: .375rem 1.25rem !important;
     }
 }
 
 
-.selectdropdown .MuiSelect-select {line-height: 1.75rem; height: auto; padding: 10px 12px;}
+.datastore-footer {
+    border-top: 1px solid #DEE3E7;
+    padding: .875rem 2rem;
+    margin-top: auto;
+    margin-left: -2rem;
+    margin-right: -2rem;
+
+    button {
+        font-size: 1.125rem !important;
+        width: 140px !important;
+    }
+}
+
+.selectdropdown .MuiSelect-select {
+    line-height: 1.75rem;
+    height: auto;
+    padding: 10px 12px;
+}

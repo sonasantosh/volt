@@ -64,8 +64,9 @@ const ViewFilesDrawer = () => {
     <Box sx={{ width: 560 }} role="presentation">
       <Stack className="title-close-wrapper" direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
         <Box className="drawer-title" component={"span"}>
-        View Files
+          View Files
         </Box>
+      
         <IconButton size="small" edge="start" className='icon-btn close-btn' onClick={toggleDrawer(false)}>
           <img src={CloseIcon} alt='close drawer' />
         </IconButton>

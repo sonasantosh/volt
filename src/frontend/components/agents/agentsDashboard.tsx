@@ -6,11 +6,19 @@ import Link from '@mui/material/Link';
 import AgentOne from '../../../assets/images/agent1.svg';
 import AgentTwo from '../../../assets/images/agent2.svg';
 import Agentfour from '../../../assets/images/agent4.svg';
+import agentSearchIcon from '../../../assets/images/agent-search.svg';
 import NoAgentList from '../../../assets/images/no-agents.png';
 import AddMorePlusIcon from '../../../assets/images/add-more-plus.svg';
 import { useNavigate } from 'react-router';
 import "../../../assets/css/styles5.scss";
+import { Button, Checkbox, FormControlLabel, List, ListItem, TextField, Typography } from '@mui/material';
+import filterIcon from '../../../assets/images/connector-img/filter-icon.svg';
+import searchIcon from '../../../assets/images/connector-img/search-icon.svg';
 
+import editIcon from '../../../assets/images/outline_edit.svg';
+import playIcon from '../../../assets/images/Play.svg';
+
+import { Label } from '@mui/icons-material';
 
 const AgentsList = () => { 
     const navigate = useNavigate();  
@@ -66,9 +74,87 @@ const AgentsList = () => {
 
                 </Grid>
 
-            <Box className="myagents-list">
-                    <Box className="subtitle">
+            <Box className="myagents-list"> 
+                    <Box className="myagents-list-header">
                         <Box component={'h2'}>My agents</Box>
+                        <Box className="connector-filter">
+                                <Box className="filter-input">
+                                    <TextField placeholder='Search connector' />
+                                    <img src={searchIcon} />
+                                </Box>
+                                <Box className="filter-box">
+                                    <Box className="filterbox-icon">
+                                        <img src={filterIcon} />
+                                    </Box>
+                                    <Box className="filter-drop">
+                                        <Box component="h4">Filter by Connectors</Box>
+                                        <List>
+                                            <ListItem> 
+                                                <FormControlLabel value="File" control={<Checkbox />} label="File"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="Amazon S3" control={<Checkbox />} label="Amazon S3"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="R2" control={<Checkbox />} label="R2"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="Google Cloud" control={<Checkbox />} label="Google Cloud"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="Google Storage" control={<Checkbox />} label="Google Storage"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="Github" control={<Checkbox />} label="Github"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="Gitlab" control={<Checkbox />} label="Gitlab"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="SVN" control={<Checkbox />} label="SVN"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="BitBucket" control={<Checkbox />} label="BitBucket"  />
+                                            </ListItem>
+                                            <ListItem> 
+                                                <FormControlLabel value="Azure DevOps Repos" control={<Checkbox />} label="Azure DevOps Repos"  />
+                                            </ListItem>
+                                        </List>
+                                    </Box>
+                                </Box>
+                            </Box>
+                    </Box>
+
+                    <Box className="add-agent">
+                        <Box className="add-agent-wrappr">
+                            <Box className="add-agent-left">
+                                <img src={agentSearchIcon} />
+                                <Box>
+                                    <Typography component='p'>Smart Search Agent</Typography>
+                                    <Typography component='label'>Search for anything across data sources.</Typography>
+                                </Box>
+                            </Box> 
+                            <Box className="add-agent-right">
+                                <Box className="connect-accord-header">
+                                    <Box className="connect-upload">
+                                        <Typography component="label">2</Typography>
+                                        <Typography>Connector</Typography>
+                                    </Box>
+                                    <Box className="connect-file">
+                                        <Typography component="label">18</Typography>
+                                        <Typography>File</Typography>
+                                    </Box>
+                                    <Box className="agent-grid-btn">
+                                        <Button variant="outlined" className='default-outline-button'>
+                                            <img src={editIcon} />
+                                        </Button>
+                                        <Button variant="contained" className='common-button'>
+                                        <img src={playIcon} /> Run
+                                        </Button>
+                                    </Box>
+                                </Box>
+                            </Box>
+                        </Box>
                     </Box>
 
                     <Box className="listwrap">
