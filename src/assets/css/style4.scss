@@ -243,6 +243,71 @@
                     }
                     
                 }
+
+                .MuiAccordionDetails-root {
+                    padding: 0px;
+                    table {
+                        tr {
+                            th {
+                                padding: .75rem 1rem;
+                                color: #1B242C;
+                                font-size: 0.875rem;
+                                line-height: 1.25rem;
+                                font-weight: 600;
+                            }
+                            td {
+                                padding: .75rem 1rem;
+                                color: #3B424A;
+                                font-size: 0.875rem;
+                                line-height: 1.25rem;
+                                font-weight: 500;
+                                .table-badge {
+                                    padding: 0.125rem .75rem;
+                                    background: #47B77F;
+                                    color: #fff;
+                                    border-radius: 2.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.create-connector-page {
+    min-height: calc(100vh - 50px);
+    position: relative;
+    .page-title {
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.crate-connector-btn {
+    text-align: right;
+    padding: 0.875rem 2rem 0;
+    border-top: 1px solid #DEE3E7;
+    margin: 0 -2rem;
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% + 64px);
+    .btn-wrapper {
+        justify-content: flex-end;
+        button {
+            min-width: 140px !important;
+            font-size: 1.125rem !important;
+            font-weight: 600 !important;
+            line-height: 1.875rem !important;
+            &.delete-btn {
+                border: 1px solid #C53434 !important;
+                color: #C53434 !important;
             }
         }
     }
