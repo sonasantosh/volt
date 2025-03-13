@@ -110,6 +110,11 @@
 }
 .table-heading-wrap {
     margin-bottom: 1rem;
+
+    .add-btn{
+        white-space: nowrap !important;
+        gap: .385rem;
+    }
 }
 .table-title {
     color: #1B242C;

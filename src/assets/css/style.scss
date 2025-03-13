@@ -59,7 +59,8 @@ h6 {
 .sidebar {
     background-image: linear-gradient(to right, #eeeafc, #f4f2fb);
     backdrop-filter: blur(.5rem);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -235,8 +236,15 @@ h6 {
 }
 
 .main-wrapper {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem 0;
     flex-grow: 1;
+    width: calc(100% - 16.875rem);
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 }
 
 
@@ -478,8 +486,26 @@ h6 {
     }
 }
 
-.search-create-btn-wrapper{
-    .common-button{
+.search-create-btn-wrapper {
+    .common-button {
         padding: .375rem 1.25rem !important;
+    }
+}
+
+
+.datastore-footer {
+    border-top: 1px solid #DEE3E7;
+    padding: .875rem 2rem;
+    margin-top: auto;
+    margin-left: -2rem;
+    margin-right: -2rem;
+
+    .footer-btn-wrapper.btn-wrapper{
+        justify-content: flex-end;
+
+        button{
+            font-size: 1.125rem !important;
+            width: 140px !important;
+        }
     }
 }
