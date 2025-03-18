@@ -18,7 +18,6 @@ import searchIcon from '../../../assets/images/connector-img/search-icon.svg';
 import editIcon from '../../../assets/images/outline_edit.svg';
 import playIcon from '../../../assets/images/Play.svg';
 
-import { Label } from '@mui/icons-material';
 
 const AgentsList = () => { 
     const navigate = useNavigate();  
@@ -31,7 +30,7 @@ const AgentsList = () => {
             </Box>
             <Box>
                 <Grid container spacing={2}>
-                    <Grid size={3}>
+                    <Grid size={{xs: 12, sm: 6, md:6, lg: 3}}>
                     <Link href="#" onClick={() => navigate("create")} underline="none" className='agentcard'>
                     
                             <Box component={'img'} src={AgentOne} alt="NoDataStore" />
@@ -40,7 +39,7 @@ const AgentsList = () => {
                         </Link>
                     </Grid>
 
-                    <Grid size={3}>
+                    <Grid size={{xs: 12, sm: 6, md:6, lg: 3}}>
                     <Link href="#" underline="none" className='agentcard'>
                             <Box component={'img'} src={AgentTwo} alt="NoDataStore" />
                             <Box component={'h3'}>Smart Search Agent</Box>
@@ -48,7 +47,7 @@ const AgentsList = () => {
                         </Link>
                     </Grid>
 
-                    <Grid size={3}>
+                    <Grid size={{xs: 12, sm: 6, md:6, lg: 3}}>
                     <Link href="#" underline="none" className='agentcard'>
                             <Box component={'img'} src={Agentfour} alt="NoDataStore" />
                             <Box component={'h3'}>Smart Search Agent</Box>
@@ -56,7 +55,7 @@ const AgentsList = () => {
                         </Link>
                     </Grid>
 
-                    <Grid size={3}>
+                    <Grid size={{xs: 12, sm: 6, md:6, lg: 3}}>
                     <Link href="#" underline="none" className='agentcard'>
                             <Box component={'img'} src={Agentfour} alt="NoDataStore" />
                             <Box component={'h3'}>Smart Search Agent</Box>
@@ -80,11 +79,11 @@ const AgentsList = () => {
                         <Box className="connector-filter">
                                 <Box className="filter-input">
                                     <TextField placeholder='Search connector' />
-                                    <img src={searchIcon} />
+                                    <img src={searchIcon}  alt='Search Icon'/>
                                 </Box>
                                 <Box className="filter-box">
                                     <Box className="filterbox-icon">
-                                        <img src={filterIcon} />
+                                        <img src={filterIcon}  alt='Search Icon'/>
                                     </Box>
                                     <Box className="filter-drop">
                                         <Box component="h4">Filter by Connectors</Box>
@@ -128,7 +127,7 @@ const AgentsList = () => {
                     <Box className="add-agent">
                         <Box className="add-agent-wrappr">
                             <Box className="add-agent-left">
-                                <img src={agentSearchIcon} />
+                                <img src={agentSearchIcon} alt='AgentSearchIcon' />
                                 <Box>
                                     <Typography component='p'>Smart Search Agent</Typography>
                                     <Typography component='label'>Search for anything across data sources.</Typography>
@@ -146,10 +145,10 @@ const AgentsList = () => {
                                     </Box>
                                     <Box className="agent-grid-btn">
                                         <Button variant="outlined" className='default-outline-button'>
-                                            <img src={editIcon} />
+                                            <img src={editIcon}  alt='Edit Icon'/>
                                         </Button>
                                         <Button variant="contained" className='common-button'>
-                                        <img src={playIcon} /> Run
+                                        <img src={playIcon}  alt='Play Icon'/> Run
                                         </Button>
                                     </Box>
                                 </Box>

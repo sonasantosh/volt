@@ -162,7 +162,7 @@ export default function AccordionExpandDefault() {
         </AccordionSummary>
         <AccordionDetails>
             <Grid container spacing={2} className="accordionbody-content">                        
-                <Grid size={6}>  
+                <Grid size={{xs: 12, sm: 12, md:8, lg: 6}}>  
                     <Grid size={12} className="multiselect-container">     
 
                     <Box className="inputwrap">
@@ -203,7 +203,7 @@ export default function AccordionExpandDefault() {
                   <ViewFilesDrawer />
                     </Grid>               
                 </Grid>
-                <Grid size={6} className="accordian-btn-end">
+                <Grid size={{xs: 12, sm: 12, md:4, lg: 6}} className="accordian-btn-end">
                     <Button variant="contained" className='common-button'> Create Datastore </Button>
                 </Grid>
             </Grid>
@@ -223,22 +223,22 @@ export default function AccordionExpandDefault() {
         <AccordionDetails>
           <Grid container spacing={2}>
 
-          <Grid size={6} className="switchbox">
+          <Grid size={{xs: 12, sm: 12, md:6, lg: 6}} className="switchbox">
               <Box component={'h3'}> Red Teaming </Box>
               <CustomSwitch defaultChecked />
             </Grid>
 
-            <Grid size={6} className="switchbox">
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}} className="switchbox">
               <Box component={'h3'}> Bias Detection </Box>
               <CustomSwitch defaultChecked />
             </Grid>
 
-            <Grid size={6}>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}>
             <Box component="p" sx={{margin:'0 0 5px 0'}}>  Confidentiality Filter </Box>
               <Upload />
               </Grid>
               
-            <Grid size={6}>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}>
             <Box component="p" sx={{margin:'0 0 5px 0'}}>  Compliance Verification </Box>
               <Upload />
               </Grid>
@@ -258,10 +258,10 @@ export default function AccordionExpandDefault() {
         </AccordionSummary>
         <AccordionDetails>
         <Grid container spacing={2}>
-            <Grid size={3}>
+            <Grid size={{xs: 12, sm: 12, md:3, lg: 3}}>
               <Box component={'h3'}> LLM</Box>
             </Grid>
-            <Grid size={9}>
+            <Grid size={{xs: 12, sm: 12, md:9, lg: 9}}>
               <Box>
                 <PillTabs/>                
               </Box>
