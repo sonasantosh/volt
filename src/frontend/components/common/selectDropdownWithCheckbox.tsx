@@ -7,11 +7,21 @@ import { Box } from '@mui/material';
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-export default function CheckboxesTags() {
+type checkboxesTagsProps = {
+  placeholder?: string;
+  label?: string;
+  fieldClass?: string;
+  required?: boolean;
+  disabled?: boolean;
+}
+
+export default function CheckboxesTags({placeholder, label, fieldClass, required, disabled }:checkboxesTagsProps) {
   return (
 
-    <Box className="inputwrap">
-        <Box component="p">Connections <Box component="span" className='required-sign'>*</Box></Box>
+    <Box className={`inputwrap ${fieldClass}`}>
+        <Box component="p">{label || "Connections"} 
+          {required && <Box component="span" className='required-sign'>*</Box>}
+        </Box>
         <Autocomplete
         multiple
         id="checkboxes-tags-demo"
@@ -38,8 +48,9 @@ export default function CheckboxesTags() {
         }}
         style={{ width: '100%' }}
           renderInput={(params) => (
-            <TextField {...params}  placeholder="Select connection" 
+            <TextField {...params}  placeholder={placeholder || "Multiple Select"}
             variant='filled'
+            disabled={disabled ? true : false}
             />
           )}
         />

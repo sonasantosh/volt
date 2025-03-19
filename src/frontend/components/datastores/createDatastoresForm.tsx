@@ -57,9 +57,9 @@ const CreateDatastoresForm = ({ updateDataStore, title }: CreateDatastoresFormPr
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
                             <Grid size={6}>
-                                <TextInput />
+                                <TextInput label='Datastore Name' placeholder='Enter datastore name' required />
                             </Grid>
-                            <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
+                            <Grid size={6}><SelectDropdownWithSearchBox label='Connections' placeholder='Select connection' required /></Grid>
                             {/* <Grid size={12}><Upload /></Grid> */}
 
                         </Grid>
