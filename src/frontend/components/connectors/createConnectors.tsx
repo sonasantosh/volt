@@ -30,7 +30,7 @@ const CreateConnectors = () => {
                 <Grid container spacing={2}>
                     <Grid size={4}>
                         <Box>
-                            <TextInput  />
+                            <TextInput label='Name' placeholder='Enter Name' required />
                         </Box>
                     </Grid>
                     <Grid size={4}>
@@ -40,17 +40,17 @@ const CreateConnectors = () => {
                     </Grid>
                     <Grid size={4}>
                         <Box>
-                            <TextInput  />
+                            <TextInput label='AWS Kay' placeholder='Enter AWS Kay' required />
                         </Box>
                     </Grid>
                     <Grid size={4}>
                         <Box>
-                            <TextInput  />
+                            <TextInput label='AWS Secret Kay' placeholder='Enter AWS Secret Kay' required />
                         </Box>
                     </Grid>
                     <Grid size={4}>
                         <Box>
-                            <SelectDropdownWithSearchBox />
+                            <SelectDropdownWithSearchBox label='Format' placeholder='Select Format' required />
                         </Box>
                     </Grid> 
                 </Grid>

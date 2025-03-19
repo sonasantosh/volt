@@ -18,7 +18,7 @@ export default function SearchField({placeholder, label}:searchFieldProps) {
       variant="filled"
       value={searchText}
       onChange={(e)=>setSearchText(e.target.value)}
-      placeholder={'Search'}
+      placeholder={placeholder || 'Search'}
       fullWidth
       slotProps={{
         input: {
