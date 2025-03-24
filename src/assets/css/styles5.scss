@@ -765,6 +765,13 @@ padding: 0  !important;
             justify-content: start !important;
         }
     }
+    .activeinactive-container{
+        flex-wrap: wrap;
+        .inactivecard {
+            width: calc(50% - 10px);
+            font-size: 15px;
+        }
+    }
 }
 @media screen and (max-width:767.9px) {
 .myagents-list {
@@ -840,5 +847,25 @@ button.outlinebtn
         width: 32px;
     }
 }
+.connect-file {
+    min-width: initial !important;
+}
+.accordionbody-content
+{
+    .accordian-btn-end
+    {
+        justify-content: start !important;
 
+        Button
+        {
+            width: 100%;
+        }
+    }
+}
+.activeinactive-container{
+    gap: 6px;
+    .inactivecard {
+        width: calc(100% - 10px);
+    }
+}
 }

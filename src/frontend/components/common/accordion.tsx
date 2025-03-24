@@ -282,7 +282,7 @@ export default function AccordionExpandDefault() {
         </AccordionSummary>
         <AccordionDetails>
         <Grid container spacing={2}>
-            <Grid size={3}>
+            <Grid size={{xs: 12, sm: 12, md:12, lg: 3}}>
             <Box component={'h3'}
            sx={{ alignItems: 'center', display:'flex', gap:'3px' }}
             > 
@@ -307,7 +307,7 @@ export default function AccordionExpandDefault() {
             </Tooltip>
               </Box>
             </Grid>
-            <Grid size={9}>
+            <Grid size={{xs: 12, sm: 12, md:12, lg: 9}}>
 
               <Box>
                 <Box className="pill-tabs">
@@ -333,10 +333,10 @@ export default function AccordionExpandDefault() {
       <TabPanel value={value} index={0} dir={theme.direction}>
         <Box>
         <Grid container spacing={2}>
-            <Grid size={6}>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}>
                 <TextInput  />
             </Grid>
-            <Grid size={6}> <SelectDropdownWithSearchBox /> </Grid>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}> <SelectDropdownWithSearchBox /> </Grid>
         </Grid>
         </Box>
       </TabPanel>
@@ -355,10 +355,10 @@ export default function AccordionExpandDefault() {
       <TabPanel value={value} index={2} dir={theme.direction}>
       <Box>
         <Grid container spacing={2}>
-            <Grid size={6}>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}>
                 <TextInput  />
             </Grid>
-            <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}><SelectDropdownWithSearchBox /></Grid>
         </Grid>
         </Box>
       </TabPanel>
@@ -372,7 +372,7 @@ export default function AccordionExpandDefault() {
           <Grid container spacing={2} 
             sx={{margin:'0 0 16px 0', padding: '0 0 20px 0'}}
           >
-            <Grid size={3}>
+            <Grid size={{xs: 12, sm: 12, md:12, lg: 3}}>
             <Box component={'h3'}
            sx={{ alignItems: 'center', display:'flex', gap:'3px' }}
             > 
@@ -399,7 +399,7 @@ export default function AccordionExpandDefault() {
 
             </Grid>
 
-            <Grid size={9}>
+            <Grid size={{xs: 12, sm: 12, md:12, lg: 9}}>
               <Box className="activeinactive-container">
                 <Box className="SlectedBox inactivecard">
                 <Box component={'span'} className='circle'></Box>
@@ -477,7 +477,7 @@ export default function AccordionExpandDefault() {
         <Grid container spacing={2}
            sx={{margin:'0 0 16px 0', padding: '0 0 20px 0'}}
         >
-              <Grid size={3}>
+              <Grid size={{xs: 12, sm: 12, md:12, lg: 3}}>
                   <Box component={'h3'}
                 sx={{ alignItems: 'center', display:'flex', gap:'3px' }}
                   > 
@@ -486,7 +486,7 @@ export default function AccordionExpandDefault() {
 
             </Grid>
             
-            <Grid size={9}>
+            <Grid size={{xs: 12, sm: 12, md:12, lg: 9}}>
               <Box className="activeinactive-container">
                 <Box className="inactivecard">
                 <Box component={'span'} className='circle'></Box>
@@ -513,7 +513,7 @@ export default function AccordionExpandDefault() {
           <Grid container spacing={2} 
            sx={{padding: '0 0 20px 0'}}
           >
-            <Grid size={3}>
+            <Grid size={{xs: 12, sm: 12, md:12, lg: 3}}>
             <Box component={'h3'}
            sx={{ alignItems: 'center', display:'flex', gap:'3px' }}
             > 
@@ -540,7 +540,7 @@ export default function AccordionExpandDefault() {
 
             </Grid>
 
-            <Grid size={9}>
+            <Grid size={{xs: 12, sm: 12, md:12, lg: 9}}>
               <Box className="activeinactive-container">
                 <Box className="SlectedBox inactivecard">
                 <Box component={'span'} className='circle'></Box>

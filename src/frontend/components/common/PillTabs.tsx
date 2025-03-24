@@ -72,10 +72,10 @@ export default function FullWidthTabs() {
       <TabPanel value={value} index={0} dir={theme.direction}>
         <Box>
         <Grid container spacing={2}>
-            <Grid size={6}>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}>
                 <TextInput  />
             </Grid>
-            <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}><SelectDropdownWithSearchBox /></Grid>
         </Grid>
         </Box>
       </TabPanel>
@@ -83,7 +83,7 @@ export default function FullWidthTabs() {
       <TabPanel value={value} index={1} dir={theme.direction}>
       <Box>
         <Grid container spacing={2}>
-            <Grid size={6}>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}} >
                 <TextInput  />
             </Grid>
            
@@ -94,10 +94,10 @@ export default function FullWidthTabs() {
       <TabPanel value={value} index={2} dir={theme.direction}>
       <Box>
         <Grid container spacing={2}>
-            <Grid size={6}>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}>
                 <TextInput  />
             </Grid>
-            <Grid size={6}><SelectDropdownWithSearchBox /></Grid>
+            <Grid size={{xs: 12, sm: 12, md:6, lg: 6}}><SelectDropdownWithSearchBox /></Grid>
         </Grid>
         </Box>
       </TabPanel>
