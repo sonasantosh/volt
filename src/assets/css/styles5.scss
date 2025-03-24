@@ -264,6 +264,7 @@ button.outlinebtn
         {
             display: flex;
             justify-content: end;
+            white-space: nowrap;
         }
         .multiselect-container
         {
@@ -666,6 +667,9 @@ padding: 0  !important;
             }
         }
         .add-agent-right {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
 
             .connect-accord-header {
                 display: flex;
@@ -730,4 +734,138 @@ padding: 0  !important;
     {
         color: #2e4acd !important;
     }
+}
+
+// Media
+@media screen and (max-width:991.9px) {
+    .add-agent 
+    {
+        .add-agent-wrappr{
+            flex-wrap: wrap;
+           
+            .add-agent-left
+            {
+               width: 100%;
+               margin-bottom: 15px;
+            }
+            .add-agent-right
+            {
+                .connect-accord-header
+                {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .accordionbody-content
+    {
+        .accordian-btn-end
+        {
+            justify-content: start !important;
+        }
+    }
+    .activeinactive-container{
+        flex-wrap: wrap;
+        .inactivecard {
+            width: calc(50% - 10px);
+            font-size: 15px;
+        }
+    }
+}
+@media screen and (max-width:767.9px) {
+.myagents-list {
+    .myagents-list-header {
+        flex-wrap: wrap;
+
+        h2 
+        {
+            width: 100%;
+        }
+        .connector-filter {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-grow: 1;
+            margin: 5px 0 0 0;
+
+            .filter-input
+            {
+                flex-grow: 1;
+                display: flex;
+                & .MuiTextField-root
+                {
+                    flex-grow: 1;
+
+                    input
+                    {
+                        min-width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.btn-endplacement.prompt-btn
+{
+button.outlinebtn
+{
+    text-align: center;
+    width: 100%;
+}
+}
+
+.multiselect-container
+{
+    flex-wrap: wrap;
+}
+.inputwrap
+{
+    width: 100%;
+
+}
+.filesbtn
+{
+    width: 100%;
+}
+}
+@media screen and (max-width:576.9px) {
+.main-wrapper {
+	padding: 1.5rem;
+	flex-grow: 1;
+	max-height: calc(100vh - 88px);
+	overflow-y: auto;
+}
+.page-title {
+	font-size: 26px;
+	line-height: 30px;
+	margin-bottom: 6px;
+}
+.title-with-arrow{
+    .icon-button-arrow {
+        height: 32px;
+        width: 32px;
+    }
+}
+.connect-file {
+    min-width: initial !important;
+}
+.accordionbody-content
+{
+    .accordian-btn-end
+    {
+        justify-content: start !important;
+
+        Button
+        {
+            width: 100%;
+        }
+    }
+}
+.activeinactive-container{
+    gap: 6px;
+    .inactivecard {
+        width: calc(100% - 10px);
+    }
+}
 }
