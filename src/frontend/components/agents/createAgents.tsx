@@ -26,7 +26,7 @@ const CreateAgents = () => {
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2}>
 
-                        <Grid size={6}>
+                        <Grid size={{xs: 12, md:4}}>
                            <Box className="inputwrap">
                                 <Box component="p"> Agent Name <Box component="span" className='required-sign'>*</Box></Box>
                                 <TextField
@@ -40,7 +40,7 @@ const CreateAgents = () => {
                             </Box>
                         </Grid>
 
-                        <Grid size={6}>
+                        <Grid size={{xs: 12, md:4}}>
                         <Box className="inputwrap">
                                 <Box component="p"> Agent Description </Box>
                                 <TextField
@@ -73,7 +73,7 @@ const CreateAgents = () => {
                         
 
                     </Grid>
-                    <Box className="btn-endplacement">
+                    <Box className="btn-endplacement prompt-btn">
                          <Button className='outlinebtn'>View Prompt Library</Button>
                     </Box>
                 </Box>
