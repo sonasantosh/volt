@@ -73,13 +73,13 @@ const Sidebar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Datastores" />
                 </NavLink>
-                <NavLink to="/api-reference" className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}>
+                {/* <NavLink to="/api-reference" className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}>
                     <ListItemIcon>
                         <img src={ApiReferenceIcon} alt='Api Reference' />
                     </ListItemIcon>
                     <ListItemText primary="API References" />
-                </NavLink>
-                <Link to={"/"} className='sidebar-link' onClick={handleMenuClick}>
+                </NavLink> */}
+                {/* <Link to={"/"} className='sidebar-link' onClick={handleMenuClick}>
                     <ListItemIcon>
                         <img src={SettingIcon} alt='Setting' />
                     </ListItemIcon>
@@ -95,7 +95,7 @@ const Sidebar = () => {
                             <ListItemText primary="Link1" />
                         </NavLink>
                     </List>
-                </Collapse>
+                </Collapse> */}
             </List>
             <Box className="user-theme-wrapper">
                 <Stack direction={"row"} gap={".385rem"} alignItems={"center"} className='sidebar-token'>
@@ -118,7 +118,7 @@ const Sidebar = () => {
                         <MoreHorizIcon />
                     </IconButton>
                 </Stack>
-                <ToggleButtonGroup
+                {/* <ToggleButtonGroup
                     value={themeSelector}
                     exclusive
                     onChange={() => setThemeSelector(themeSelector === 'light' ? 'dark' : 'light')}
@@ -134,7 +134,7 @@ const Sidebar = () => {
                         <DarkModeOutlinedIcon />
                         <Box component={"span"} className='default-text'>Dark</Box>
                     </ToggleButton>
-                </ToggleButtonGroup>
+                </ToggleButtonGroup> */}
             </Box>
         </Box >
     )
